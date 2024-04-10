@@ -90,6 +90,7 @@ const handleFinish = async () => {
               className={`rounded-lg p-4 cursor-pointer ${selectedOptions.includes('share_work') ? 'bg-gray-100' : 'bg-white'}`}
               onClick={() => handleOptionSelect('share_work')}
             >
+              <img src='/content-creator.png'/>  
               <h3 className="text-lg font-bold mb-2">I'm a designer looking to share my work</h3>
               {selectedOptions.includes('share_work') && <span className="absolute top-2 right-2 h-4 w-4 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">✓</span>}
             </div>
@@ -97,6 +98,7 @@ const handleFinish = async () => {
               className={`rounded-lg p-4 cursor-pointer ${selectedOptions.includes('hire_designer') ? 'bg-gray-100' : 'bg-white'}`}
               onClick={() => handleOptionSelect('hire_designer')}
             >
+              <img src='/office-workplace.png'/>  
               <h3 className="text-lg font-bold mb-2">I'm looking to hire a designer</h3>
               {selectedOptions.includes('hire_designer') && <span className="absolute top-2 right-2 h-4 w-4 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">✓</span>}
             </div>
@@ -104,6 +106,7 @@ const handleFinish = async () => {
               className={`rounded-lg p-4 cursor-pointer ${selectedOptions.includes('design_inspiration') ? 'bg-gray-100' : 'bg-white'}`}
               onClick={() => handleOptionSelect('design_inspiration')}
             >
+              <img src='/developer-team.png'/>  
               <h3 className="text-lg font-bold mb-2">I'm looking for design inspiration</h3>
               {selectedOptions.includes('design_inspiration') && <span className="absolute top-2 right-2 h-4 w-4 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">✓</span>}
             </div>

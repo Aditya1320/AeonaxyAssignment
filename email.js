@@ -43,7 +43,7 @@ app.post('/send-email', async (req, res) => {
 
     // Make a request to the Resend API to send the email
     const { data, error } = await resend.emails.send({
-      from: 'email@dribbble.varification.com',
+      from: 'onboarding@resend.dev',
       to: [email], // Assuming userEmail is the user's email address
       subject: 'Email Verification',
       html: '<p>Please verify your email.</p>',
