@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To install the necessary dependencies, run the following command:
 
-npm install axios cors express
+### `npm install axios cors express`
 
 
 ## Usage
