@@ -12,10 +12,18 @@ const SignupForm = () => {
   const [password, setPassword] = useState('');
   const [usernameError, setUsernameError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
   const [isCreatingAccount, setIsCreatingAccount] = useState(false);
 
   const handleSubmit = async () => {
     setIsCreatingAccount(true);
+    if(!isChecked)
+      {
+       
+        alert('Please agree to the terms to create an account.');
+        return;
+      }
+    
     try {
       // Make API request to create a new account
       const response = await axios.post('/api/signup', {
@@ -68,9 +76,12 @@ const SignupForm = () => {
       setEmailError('Error checking email');
     }
   };
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
 
   return (
-    <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-2 min-h-screen bg-yellow-100">   
+    <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-2 bg-yellow-100">   
     <div className="flex-1 bg-yellow-100 p-8 my-8 flex items-stretch">
       <div className="max-w-md">
         <h1 className="text-3xl font-bold mb-4 py-4">Discover the world's top Designers & Creatives.</h1>
@@ -140,10 +151,24 @@ const SignupForm = () => {
           />
         </div>
         <div className="mb-6">
-          <p className="text-sm text-gray-500">
+        <input
+              type="checkbox"
+              id="termsCheckbox"
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+              className="mr-2"
+            />
+            <label htmlFor="termsCheckbox" className="text-sm text-gray-500">
+              Creating an account means you're okay with our&nbsp;
+              <a href="#" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Terms of Service</a>,
+              &nbsp;<a href="#" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>,
+              &nbsp;and our default&nbsp;
+              <a href="#" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Notification Settings</a>.
+            </label>
+          {/* <p className="text-sm text-gray-500">
             Creating an account means you're okay with our Terms of Service,
             Privacy Policy, and our default Notification Settings.
-          </p>
+          </p> */}
         </div>
         <button 
         type='submit'
@@ -158,7 +183,6 @@ const SignupForm = () => {
           Terms of Service apply.
         </p>
       </div>
-      <p className="mt-4 text-gray-500">Art by Peter Tarka</p>
     </div>
   );
 };
