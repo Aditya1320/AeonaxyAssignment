@@ -6,7 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To install the necessary dependencies, run the following command:
 
-```bash
 npm install axios cors express
 
 
@@ -14,11 +13,11 @@ npm install axios cors express
 
 Instructions for using the project, including how to run it locally.
 
+Start the Express servers by running the following commands:
+### `node server.js`
+### `node email.js`
 
-## Available Scripts
-
-In the project directory, you can run:
-
+Start the React App: 
 ### `npm start`
 
 Runs the app in the development mode.\
