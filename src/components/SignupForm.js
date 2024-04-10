@@ -25,7 +25,7 @@ const SignupForm = () => {
       }
     
     try {
-      // Make API request to create a new account
+      // API request to create a new account
       const response = await axios.post('/api/signup', {
         name,
         username,
@@ -33,15 +33,12 @@ const SignupForm = () => {
         password
       });
       console.log('Account created:', response.data);
-      // Optionally, redirect to a different page or show a success message
+      navigate(`/create-profile?email=${encodeURIComponent(email)}`);
     } catch (error) {
       console.error('Error creating account:', error);
-      // Handle error (e.g., display error message to user)
     } finally {
       setIsCreatingAccount(false);
     }
-    // navigate('/create-profile');
-    navigate(`/create-profile?email=${encodeURIComponent(email)}`);
   };
 
 

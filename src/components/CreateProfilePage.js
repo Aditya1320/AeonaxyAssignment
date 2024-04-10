@@ -15,13 +15,8 @@ const CreateProfilePage = () => {
         setAvatarPreview(URL.createObjectURL(file));
     };
 
-    const handleUpload = () => {
-        // Handle uploading the avatar image (e.g., using FormData and an HTTP request)
-        console.log('Uploading avatar:', avatar);
-    };
-
     const handleNext = async () => {
-        // navigate('/what-next');
+        
         navigate(`/what-next?email=${encodeURIComponent(userEmail)}`);
     }
 
@@ -41,23 +36,10 @@ const CreateProfilePage = () => {
                  <div className="flex items-center justify-center ">
                      <div className="w-32 h-32 rounded-full border-2 border-gray-300 border-dashed flex items-center justify-center mx-left">
                         <img src={avatarPreview} alt="" className="w-32 h-32 rounded-full  flex items-center justify-center mx-left" /> 
-                         {/* <span className="text-gray-400">+</span> */}
                      </div>
                  </div>
                     <input type="file" accept="image/*" onChange={handleAvatarChange} className='my-8' />
                 </div>
-                {/* <button
-                    className="w-full py-2 px-4 bg-pink-500 text-white font-bold rounded-md hover:bg-pink-600 transition-colors duration-300"
-                    onClick={handleUpload}
-                >
-                    Upload Avatar
-                </button> */}
-                {/* {avatar && (
-                    <div className="mt-6">
-                        <h2 className="text-xl font-semibold mb-2">Preview</h2>
-                        <img src={URL.createObjectURL(avatar)} alt="Avatar Preview" className="max-w-xs" />
-                    </div>
-                )} */}
                 <div className="mb-8">
                     <h2 className="text-lg font-semibold mb-4">Add your location</h2>
                       <input

@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-// import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Resend } from 'resend';
 
 const WhatBringsYou = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
   const userEmail = new URLSearchParams(location.search).get('email');
-//   const resend = new Resend("re_NMUe4AEr_NoCkuYgLzJVxS5HVnqVjQiVZ");
-//   const [setIsSendingEmail] = useState(false);
+
 
 
   const handleOptionSelect = (option) => {
@@ -22,32 +19,7 @@ const WhatBringsYou = () => {
   const handleReturn = async () => {
     navigate('/create-profile');
 }
-// const handleFinish = async () => {
-    
-//     navigate('/email-verify');
-// }
-// const handleFinish = async () => {
-//     // setIsSendingEmail(true);
-//     try {
-//         resend.use(cors(corsOptions));
-//         const { data, error } = await resend.emails.send({
-//             from: 'Acme <onboarding@resend.dev>',
-//             to: [userEmail], // Assuming userEmail is the user's email address
-//             subject: 'Please verify your email',
-//             html: '<p>Please verify your email to complete the signup process.</p>',
-//           });
-//           if (error) {
-//             console.error('Error sending verification email:', error);
-//             // Handle error (e.g., display error message to user)
-//           } else {
-//              console.log('Verification email sent:', data);
-//              navigate(`/email-verify?email=${encodeURIComponent(userEmail)}`);
-//           }
-//     } catch (error) {
-//       console.error('Error sending email:', error);
-//       // Handle error (e.g., display error message to user)
-//     }
-//   };
+
 const handleFinish = async () => {
     try {
       const response = await fetch('http://localhost:5000/send-email', {
@@ -61,14 +33,11 @@ const handleFinish = async () => {
       if (response.ok) {
         console.log('Email sent successfully');
         navigate(`/email-verify?email=${encodeURIComponent(userEmail)}`);
-        // Redirect or show a success message as needed
       } else {
         console.error('Failed to send email');
-        // Handle error case
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      // Handle error case
     }
   };
 
