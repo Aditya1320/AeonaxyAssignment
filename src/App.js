@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignupForm from './components/SignupForm';
-// import IllustrationSection from './components/IllustrationSection';
 import CreateProfilePage from './components/CreateProfilePage';
 import WhatBringsYou from './components/WhatBringsYou';
 import VerifyEmail from './components/VerifyEmail';

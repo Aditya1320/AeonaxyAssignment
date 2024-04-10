@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
 const SignupForm = () => {
   
   const navigate = useNavigate();
@@ -69,12 +70,23 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-yellow-100">
-      <div className="max-w-md w-full px-8 py-12 bg-white shadow-lg rounded-lg">
+    <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-2 min-h-screen bg-yellow-100">   
+    <div className="flex-1 bg-yellow-100 p-8 my-8 flex items-stretch">
+      <div className="max-w-md">
+        <h1 className="text-3xl font-bold mb-4 py-4">Discover the world's top Designers & Creatives.</h1>
+        <div className="relative">
+          <div className="absolute -left-8 -top-8 h-20 w-20 rounded-full bg-pink-100"></div>
+          <div className="absolute -right-8 -bottom-8 h-12 w-12 rounded-full bg-teal-100"></div>
+          <div className="relative flex items-center justify-center h-96 bg-white rounded-lg shadow-lg p-4">
+            <img src="/website-design.jpg"  wiidth="1000" height="1000" className=""/>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div className="max-w-md w-full px-8 py-12 bg-white shadow-lg rounded-lg my-8">
         <h1 className="text-3xl font-bold mb-6 text-center">
           Sign up to Dribbble
         </h1>
-        {/* <p className="text-red-500 mb-4">Username has already been taken</p> */}
         <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block font-bold mb-2">
