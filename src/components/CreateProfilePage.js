@@ -44,14 +44,14 @@ const CreateProfilePage = () => {
                          {/* <span className="text-gray-400">+</span> */}
                      </div>
                  </div>
-                    <input type="file" accept="image/*" onChange={handleAvatarChange} />
+                    <input type="file" accept="image/*" onChange={handleAvatarChange} className='my-8' />
                 </div>
-                <button
+                {/* <button
                     className="w-full py-2 px-4 bg-pink-500 text-white font-bold rounded-md hover:bg-pink-600 transition-colors duration-300"
                     onClick={handleUpload}
                 >
                     Upload Avatar
-                </button>
+                </button> */}
                 {/* {avatar && (
                     <div className="mt-6">
                         <h2 className="text-xl font-semibold mb-2">Preview</h2>
