@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installation
+
+To install the necessary dependencies, run the following command:
+
+```bash
+npm install axios cors express
+
+
+## Usage
+
+Instructions for using the project, including how to run it locally.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
