@@ -26,7 +26,7 @@ const SignupForm = () => {
     
     try {
       // API request to create a new account
-      const response = await axios.post('/api/signup', {
+      const response = await axios.post('http://localhost:3013/api/signup', {
         name,
         username,
         email,
@@ -162,10 +162,6 @@ const SignupForm = () => {
               &nbsp;and our default&nbsp;
               <a href="#" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">Notification Settings</a>.
             </label>
-          {/* <p className="text-sm text-gray-500">
-            Creating an account means you're okay with our Terms of Service,
-            Privacy Policy, and our default Notification Settings.
-          </p> */}
         </div>
         <button 
         type='submit'
