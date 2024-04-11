@@ -2,10 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To install the necessary dependencies, run the following command:
 
+### `npm install axios cors express`
+
+
+## Usage
+
+Instructions for using the project, including how to run it locally.
+
+Start the Express servers by running the following commands:
+### `node server.js`
+### `node email.js`
+
+Start the React App: 
 ### `npm start`
 
 Runs the app in the development mode.\
