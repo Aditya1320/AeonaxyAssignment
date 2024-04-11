@@ -44,8 +44,8 @@ const handleFinish = async () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <div className="flex items-center px-4 py-2">
-        <h1 className="text-2xl font-bold text-pink-500">dribbble</h1>
+      <div className="flex items-center px-6 py-6 ">
+        <h1 className="text-3xl font-bold text-pink-500 font-cedarville ">dribbble</h1>
         <div className="ml-auto">
           <span className="text-gray-500 text-sm">&lt;</span>
         </div>

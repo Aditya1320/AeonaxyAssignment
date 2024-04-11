@@ -11,7 +11,7 @@ const VerifyEmail = () => {
       <header className="bg-white py-4 border-b border-gray-200">
         <div className="container mx-auto flex items-center justify-between px-4">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-bold text-pink-500 mr-4">
+            <a href="#" className="text-2xl font-bold text-black-500 mr-4 font-cedarville">
               dribbble
             </a>
             <nav>
@@ -98,7 +98,7 @@ const VerifyEmail = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-6 md:grid-cols-6 gap-8">
           <div>
-          <h1 className="text-2xl font-bold text-pink-500">dribbble</h1>
+          <h1 className="text-2xl font-bold text-pink-500 font-cedarville">dribbble</h1>
             <p className="text-gray-600 mt-4">
               Dribbble is the world's leading community for creatives to share, grow, and get hired.
             </p>
