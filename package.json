@@ -5,6 +5,9 @@
   "dependencies": {
     "@cloudinary/react": "^1.13.0",
     "@cloudinary/url-gen": "^1.19.0",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -22,8 +25,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start:frontend": "react-scripts start",
+    "start:backend": "node server.js",
+    "start:api": "node email.js",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\" \"npm run start:api\"",
+    "build:frontend": "react-scripts build",
+    "build:backend": "node server.js",
+    "build:api":  "node email.js",
+    "build":"concurrently \"npm run build:frontend\" \"npm run build:backend\" \"npm run build:api\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
