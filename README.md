@@ -13,10 +13,6 @@ To install the necessary dependencies, run the following command:
 
 Instructions for using the project, including how to run it locally.
 
-Start the Express servers by running the following commands:
-### `node server.js`
-### `node email.js`
-
 Start the React App: 
 ### `npm start`
 
