@@ -3,7 +3,7 @@ var cors = require('cors');
 const {Resend} = require('resend');
 
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:['http://localhost:3000', 'https://aeonaxy-assignment.web.app'], 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -23,7 +23,7 @@ app.post('/send-email', async (req, res) => {
     // Make a request to the Resend API to send the email
     const { data, error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: [email], // email is the user's email address
+      to: ['adityarane61@gmail.com'], // email is the user's email address
       subject: 'Email Verification',
       html: '<p>Please verify your email.</p>',
     });
